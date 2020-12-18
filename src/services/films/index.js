@@ -27,9 +27,9 @@ router.route('/').post (async (req,res,next) =>
         const newFilm = {...req.body, id:uniqid()}
     
         films.push(newFilm)
-        await writeDB(filmsPath, films)
+        await writeDB(filmsPath, newFilm)
         res.send(newFilm)
-        co
+        
 
 
         
